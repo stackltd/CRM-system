@@ -1,0 +1,2 @@
+Django==6.0.1
+pipdeptree==2.30.0
