@@ -1,9 +1,20 @@
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import (
+    TemplateView,
+)
+
+from products.models import Product
+from ads.models import Ad
+from leads.models import Lead
+from customers.models import Customer
+from contracts.models import Contract
 
 
 class GenStatView(TemplateView):
     template_name = "users/index.html"
+
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
-        # context["ad"] = Ad.objects.all()
+        for model in (Product, Ad, Lead, Customer, Contract):
+            context.update({f"{model._meta.verbose_name_plural}_count": model.objects.count()})
+        print(context)
         return self.render_to_response(context)

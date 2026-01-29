@@ -6,7 +6,10 @@ from django.db.models import (
     DecimalField,
     SmallIntegerField,
     DateTimeField,
-    BooleanField, FileField, ForeignKey, PROTECT,
+    BooleanField,
+    FileField,
+    ForeignKey,
+    PROTECT,
 )
 
 from products.models import Product
@@ -16,6 +19,7 @@ def user_contract_dir_path(inst: "Contract", filename: str) -> str:
     path = f"contracts/{filename}"
     return path
 
+
 class Contract(models.Model):
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     product = ForeignKey(Product, on_delete=PROTECT, related_name="contracts")
@@ -23,9 +27,7 @@ class Contract(models.Model):
     name = CharField(max_length=100)
     start_date = DateTimeField()
     end_date = DateTimeField()
-    cost = DecimalField(default=0, max_digits=8, decimal_places=2)
+    cost = DecimalField(default=0, max_digits=10, decimal_places=2)
 
     def __str__(self):
         return f"{self.name}"
-
-

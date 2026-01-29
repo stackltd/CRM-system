@@ -1,7 +1,10 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models import (
-    CharField, ForeignKey, PROTECT, EmailField,
+    CharField,
+    ForeignKey,
+    PROTECT,
+    EmailField,
 )
 
 from phonenumber_field.modelfields import PhoneNumberField
@@ -18,4 +21,4 @@ class Lead(models.Model):
     phone = PhoneNumberField(unique=True, region=None)
 
     def __str__(self):
-        return f"{self.first_name, self.last_name}"
+        return f"{self.first_name} {self.last_name}"

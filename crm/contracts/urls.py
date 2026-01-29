@@ -1,6 +1,12 @@
 from django.urls import path
 
-from .views import ContractsListView, ContractCreateView, ContractDeleteView, ContractDetailView, ContractUpdateView
+from .views import (
+    ContractsListView,
+    ContractCreateView,
+    ContractDeleteView,
+    ContractDetailView,
+    ContractUpdateView,
+)
 
 app_name = "contracts"
 
@@ -11,4 +17,3 @@ urlpatterns = [
     path("<int:pk>/", ContractDetailView.as_view(), name="contract-detail"),
     path("<int:pk>/edit/", ContractUpdateView.as_view(), name="contract-update"),
 ]
-

@@ -7,4 +7,3 @@ app_name = "users"
 urlpatterns = [
     path("", GenStatView.as_view(), name="statistic"),
 ]
-

@@ -9,10 +9,8 @@ class CustomLoginView(LoginView):
 
 
 class CustomLogoutView(LogoutView):
-    http_method_names = ['get', 'post']
+    http_method_names = ["get", "post"]
 
     def get(self, request, *args, **kwargs):
         logout(request)
-        return redirect('registration:login')
-
-
+        return redirect("registration:login")

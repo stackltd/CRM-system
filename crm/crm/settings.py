@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "users.apps.UsersConfig",
     "leads.apps.LeadsConfig",
     "contracts.apps.ContractsConfig",
+    "customers.apps.CustomersConfig",
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,4 @@ MEDIA_ROOT = BASE_DIR / "uploads"
 
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL  = LOGIN_URL
+LOGOUT_REDIRECT_URL = LOGIN_URL

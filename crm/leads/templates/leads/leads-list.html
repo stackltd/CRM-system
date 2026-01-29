@@ -7,6 +7,11 @@
         <a href="/leads/new" class="btn btn-success p-2">Создать</a>
     </div>
     <div class="col">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
         <ul class="list-group">
             {% for lead in leads %}
             <li class="list-group-item list-group-item-light d-flex justify-content-between">

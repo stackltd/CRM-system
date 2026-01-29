@@ -16,8 +16,9 @@ class Ad(models.Model):
     product = ForeignKey(Product, on_delete=PROTECT, related_name="ads")
     name = CharField(max_length=100)
     promotionChannel = CharField(max_length=100, null=False, blank=True)
-    budget = DecimalField(default=0, max_digits=12, decimal_places=2, validators=[MinValueValidator(0)])
+    budget = DecimalField(
+        default=0, max_digits=12, decimal_places=2, validators=[MinValueValidator(0)]
+    )
 
     def __str__(self):
         return f"{self.name}"
-
