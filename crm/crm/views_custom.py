@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import ProtectedError
 from django.shortcuts import redirect, reverse
 from django.views.generic import DeleteView, CreateView, UpdateView
@@ -32,3 +33,16 @@ class CustomUpdateView(UpdateView):
             f"{model_name}:{model_name[:-1]}-detail", kwargs={"pk": self.object.pk}
         )
         return url
+
+
+class PermissionsMixin(LoginRequiredMixin, UserPassesTestMixin):
+    def test_func(self):
+        return self.request.user.has_perm(self.permission_required)
+
+    def handle_no_permission(self):
+        referer = self.request.META.get('HTTP_REFERER') or "/"
+        messages.warning(
+            self.request,
+            "Ошибка. У вас нет прав на выполнение данного действия"
+        )
+        return redirect(referer)

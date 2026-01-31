@@ -130,3 +130,33 @@ MEDIA_ROOT = BASE_DIR / "uploads"
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = LOGIN_URL
+
+
+# LOGGING = {
+#     "version": 1,
+#     "filters": {
+#         "require_debug_true": {
+#             "()": "django.utils.log.RequireDebugTrue",
+#         }
+#     },
+#     'formatters': {
+#             'verbose': {
+#                 'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+#                 'style': '{',  # Используем форматирование через str.format()
+#             },
+#         },
+#     "handlers": {
+#         "console": {
+#             "level": "DEBUG",
+#             "filters": ["require_debug_true"],
+#             "class": "logging.StreamHandler",
+#             "formatter": "verbose"
+#         }
+#     },
+#     "loggers": {
+#         "django.db.backends": {
+#         "level": "DEBUG",
+#         "handlers": ["console"]
+#         }
+#     }
+# }

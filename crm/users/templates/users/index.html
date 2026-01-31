@@ -2,6 +2,11 @@
 
 {% block content %}
 <h2 class="fw-bold">Общая статистика</h2>
+{% if messages %}
+{% for message in messages %}
+    <div class="alert alert-danger">{{ message }}</div>
+{% endfor %}
+{% endif %}
 <div class="row bg-white px-3 py-3 mx-2 my-5 rounded pb-5 shadow-lg">
     <div class="col">
         <div class="card border-light shadow" style="background: #eee">
@@ -59,4 +64,15 @@
         </div>
     </div>
 </div>
+<div class="col">
+    <div class="card border-light shadow">
+        <div class="card-body" style="background: #eee">
+            <h5 class="card-title fw-bold">
+                <a href="/ads/statistic" class="link-dark text-decoration-none" style="font-size: 29px;">Статистика рекламных компаний</a>
+            </h5>
+            <!-- <i class="fas fa-file-contract float-end"></i> -->
+        </div>
+    </div>
+</div>
+<!-- <a href="/ads/statistic" class="btn btn-primary p-5 fw-bold">Статистика рекламных компаний</a> -->
 {% endblock %}

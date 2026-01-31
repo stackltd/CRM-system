@@ -1,4 +1,5 @@
-from django.db.models import Count, F, Sum
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Count, F, Sum, Prefetch
 from django.urls import reverse_lazy
 from django.views.generic import (
     TemplateView,
@@ -8,40 +9,47 @@ from django.views.generic import (
 
 from .models import Ad
 from leads.models import Lead
-from crm.views_custom import CustomDeleteView, CustomCreateView, CustomUpdateView
+from products.models import Product
+from crm.views_custom import CustomDeleteView, CustomCreateView, CustomUpdateView, PermissionsMixin
 
 
-class AdsList(ListView):
+class AdsList(PermissionsMixin, ListView):
     template_name = "ads/ads-list.html"
-    queryset = Ad.objects.select_related("product")
+    queryset = Ad.objects.only("name")
     context_object_name = "ads"
+    permission_required = "ads.view_ad"
 
 
-class AdCreateView(CustomCreateView):
+class AdCreateView(PermissionsMixin, CustomCreateView):
     model = Ad
     fields = ["product", "name", "promotionChannel", "budget"]
     template_name = "ads/ads-create.html"
     success_url = reverse_lazy("ads:ads-list")
+    permission_required = "ads.add_ad"
 
 
-class AdDeleteView(CustomDeleteView):
+class AdDeleteView(PermissionsMixin, CustomDeleteView):
     model = Ad
     template_name = "ads/ads-delete.html"
     success_url = reverse_lazy("ads:ads-list")
+    permission_required = "ads.delete_ad"
 
 
-class AdDetailView(DetailView):
+class AdDetailView(PermissionsMixin, DetailView):
     template_name = "ads/ads-detail.html"
-    queryset = Ad.objects.select_related("product")
+    product_qs = Product.objects.only("name")
+    queryset = Ad.objects.prefetch_related((Prefetch("product", queryset=product_qs))).defer("promotionChannel", "created_by_id")
+    permission_required = "ads.view_ad"
 
 
-class AdUpdateView(CustomUpdateView):
+class AdUpdateView(PermissionsMixin, CustomUpdateView):
     model = Ad
     fields = ["product", "name", "promotionChannel", "budget"]
     template_name = "ads/ads-edit.html"
+    permission_required = "ads.change_ad"
 
 
-class AdStatisticView(TemplateView):
+class AdStatisticView(LoginRequiredMixin , TemplateView):
     template_name = "ads/ads-statistic.html"
 
     def get(self, request, *args, **kwargs):
@@ -61,3 +69,4 @@ class AdStatisticView(TemplateView):
         )
         context["ads"] = ads
         return self.render_to_response(context)
+
