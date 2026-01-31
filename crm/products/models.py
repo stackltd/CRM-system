@@ -12,7 +12,7 @@ from django.db.models import (
 
 class Product(models.Model):
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
-    name = CharField(max_length=100)
+    name = CharField(max_length=100, db_index=True)
     description = TextField()
     cost = DecimalField(
         default=0, max_digits=12, decimal_places=2, validators=[MinValueValidator(0)]

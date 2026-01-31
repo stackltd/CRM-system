@@ -24,7 +24,7 @@ class Contract(models.Model):
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     product = ForeignKey(Product, on_delete=PROTECT, related_name="contracts")
     file = FileField(upload_to=user_contract_dir_path)
-    name = CharField(max_length=100)
+    name = CharField(max_length=100, db_index=True)
     start_date = DateTimeField()
     end_date = DateTimeField()
     cost = DecimalField(default=0, max_digits=10, decimal_places=2)
