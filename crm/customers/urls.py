@@ -1,10 +1,22 @@
+"""
+URL‑конфигурация приложения customers.
+
+Содержит маршруты:
+- /customers/ — список клиентов;
+- /customers/new/ — создание клиента;
+- /customers/<int:pk>/ — детализация клиента;
+- /customers/<int:pk>/edit/ — редактирование клиентов;
+- /customers/<int:pk>/delete/ — удаление клиентов;
+"""
+
+
 from django.urls import path
 
 from .views import (
-    CustomersListView,
     CustomerCreateView,
     CustomerDeleteView,
     CustomerDetailView,
+    CustomersListView,
     CustomerUpdateView,
 )
 

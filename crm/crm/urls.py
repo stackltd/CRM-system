@@ -1,29 +1,27 @@
 """
 URL configuration for crm project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+Содержит маршруты:
+- /admin/ — админ. панель
+- "" — главная страница;
+- /accounts/ — авторизация пользователя системы;
+- /products — базовый путь для products;
+- /ads — базовый путь для ads;
+- /leads — базовый путь для leads;
+- /contracts — базовый путь для contracts;
+- /customers — базовый путь для customers;
+
 """
 
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("accounts/", include("registration.urls")),
     path("", include("users.urls")),
+    path("accounts/", include("registration.urls")),
     path("products/", include("products.urls")),
     path("ads/", include("ads.urls")),
     path("leads/", include("leads.urls")),

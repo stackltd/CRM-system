@@ -1,17 +1,26 @@
-from django.contrib.auth.models import User
+"""
+Модуль для моделей приложения ads.
+"""
+
+from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.db.models import (
+    PROTECT,
     CharField,
     DecimalField,
     ForeignKey,
-    PROTECT,
 )
 
 from products.models import Product
 
+User = get_user_model()
 
 class Ad(models.Model):
+    """
+    Модель для рекламы.
+    """
+
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     product = ForeignKey(Product, on_delete=PROTECT, related_name="ads")
     name = CharField(max_length=100, db_index=True)

@@ -1,14 +1,28 @@
+"""
+Модуль представлений приложения contracts
+"""
+# pylint: disable=too-many-ancestors
+
 from django.db.models import Prefetch
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView
+from django.views.generic import DetailView, ListView
+
+from crm.views_custom import (
+    CustomCreateView,
+    CustomDeleteView,
+    CustomUpdateView,
+    PermissionsMixin,
+)
+from products.models import Product
 
 from .forms import ContractForm
 from .models import Contract
-from crm.views_custom import CustomDeleteView, CustomCreateView, CustomUpdateView, PermissionsMixin
-from products.models import Product
 
 
 class ContractsListView(PermissionsMixin, ListView):
+    """
+    Список услуг
+    """
     template_name = "contracts/contracts-list.html"
     context_object_name = "contracts"
     queryset = Contract.objects.only("name")
@@ -16,6 +30,9 @@ class ContractsListView(PermissionsMixin, ListView):
 
 
 class ContractCreateView(PermissionsMixin, CustomCreateView):
+    """
+    Создание услуги
+    """
     model = Contract
     form_class = ContractForm
     template_name = "contracts/contracts-create.html"
@@ -24,6 +41,9 @@ class ContractCreateView(PermissionsMixin, CustomCreateView):
 
 
 class ContractDeleteView(PermissionsMixin, CustomDeleteView):
+    """
+    Удаление услуги
+    """
     model = Contract
     template_name = "contracts/contracts-delete.html"
     success_url = reverse_lazy("contracts:contracts-list")
@@ -31,13 +51,21 @@ class ContractDeleteView(PermissionsMixin, CustomDeleteView):
 
 
 class ContractDetailView(PermissionsMixin, DetailView):
+    """
+    Детализация услуги
+    """
     template_name = "contracts/contracts-detail.html"
     product_qs = Product.objects.only("name")
-    queryset = Contract.objects.prefetch_related((Prefetch("product", queryset=product_qs))).defer("created_by", "file")
+    queryset = Contract.objects.prefetch_related(
+        (Prefetch("product", queryset=product_qs))
+    ).defer("created_by", "file")
     permission_required = "contracts.view_contract"
 
 
 class ContractUpdateView(PermissionsMixin, CustomUpdateView):
+    """
+    Обновление услуги
+    """
     model = Contract
     form_class = ContractForm
     template_name = "contracts/contracts-edit.html"

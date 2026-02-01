@@ -1,12 +1,24 @@
+"""
+URL‑конфигурация приложения ads.
+
+Содержит маршруты:
+- /ads/ — список рекламных компаний;
+- /ads/new/ — создание рекламной компании;
+- /ads/<int:pk>/ — детали рекламной компании;
+- /ads/<int:pk>/edit/ — редактирование рекламной компании;
+- /ads/<int:pk>/delete/ — удаление рекламной компании;
+- /ads/statistic/ — статистика рекламной компании;
+"""
+
 from django.urls import path
 
 from .views import (
-    AdsList,
     AdCreateView,
     AdDeleteView,
     AdDetailView,
-    AdUpdateView,
+    AdsList,
     AdStatisticView,
+    AdUpdateView,
 )
 
 app_name = "ads"

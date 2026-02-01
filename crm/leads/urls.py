@@ -1,10 +1,21 @@
+"""
+URL‑конфигурация приложения leads.
+
+Содержит маршруты:
+- /leads/ — список потенциальных клиентов;
+- /leads/new/ — создание потенциального клиента;
+- /leads/<int:pk>/ — детализация потенциального клиента;
+- /leads/<int:pk>/edit/ — редактирование потенциального клиента;
+- /leads/<int:pk>/delete/ — удаление потенциального клиента;
+"""
+
 from django.urls import path
 
 from .views import (
-    LeadsListView,
     LeadCreateView,
     LeadDeleteView,
     LeadDetailView,
+    LeadsListView,
     LeadUpdateView,
 )
 

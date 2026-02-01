@@ -1,0 +1,894 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2026-01-25T13:57:20.052Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "operator",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2026-01-25T13:58:30.827Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "operator",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2026-01-25T14:01:23.881Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2026-01-25T14:02:17.214Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "marketer",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2026-01-25T14:02:33.920Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "1",
+            "object_repr": "marketers",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2026-01-25T14:02:45.369Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "2",
+            "object_repr": "managers",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2026-01-25T14:02:53.568Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "3",
+            "object_repr": "operators",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2026-01-25T14:03:23.889Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2026-01-25T14:03:36.680Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "marketer",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2026-01-25T14:03:43.073Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "operator",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2026-01-28T15:38:03.968Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2026-01-29T14:47:00.447Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2026-01-29T14:59:18.919Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\", \"Last login\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2026-01-29T15:23:19.389Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2026-01-29T15:25:44.347Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2026-01-29T15:29:50.893Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2026-01-29T15:30:36.216Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2026-01-29T18:09:29.146Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2026-01-29T18:10:11.427Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2026-01-31T10:11:58.450Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2026-01-31T10:14:44.962Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "operator",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2026-01-31T10:17:42.729Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "marketer",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\", \"Last login\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2026-01-31T10:20:04.519Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "manager",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2026-01-31T10:20:18.354Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "marketer",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2026-01-31T10:20:24.015Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "operator",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2026-01-31T10:24:17.062Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "3",
+            "object_repr": "operators",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2026-01-31T10:25:27.510Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "1",
+            "object_repr": "marketers",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2026-01-31T10:26:41.063Z",
+            "user": 1,
+            "content_type": 2,
+            "object_id": "2",
+            "object_repr": "managers",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "marketers",
+            "permissions": [
+                29,
+                30,
+                31,
+                32,
+                25,
+                26,
+                27,
+                28
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 2,
+        "fields": {
+            "name": "managers",
+            "permissions": [
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                36
+            ]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 3,
+        "fields": {
+            "name": "operators",
+            "permissions": [
+                33,
+                34,
+                35,
+                36
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$1xgHMxsqy2QrMGiLR40rRB$4Ka0gxtK8xkIcp+WtlJ0qAk7ZvhXc6O2T96U0/4VRbc=",
+            "last_login": "2026-01-31T10:45:42.469Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2026-01-24T16:25:53.273Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$9y9ssAhJZ7hyFOmGnOXhW3$EjoceyR6IpeXBg/IUADT0DmlQUVQnWESJD79eJHqd7A=",
+            "last_login": "2026-01-31T10:20:38.059Z",
+            "is_superuser": false,
+            "username": "operator",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-01-25T13:57:20Z",
+            "groups": [
+                3
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$B9KvERFwBwroqw11SH3kdW$ndM3S/ModENlemHSXuXsvwyW/+ux+OveUt8CDy3A4AM=",
+            "last_login": "2026-01-31T10:25:45.274Z",
+            "is_superuser": false,
+            "username": "manager",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-01-25T14:01:22Z",
+            "groups": [
+                2
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$ZOuIBQV7tsNZrK0FbHj14z$+f22lO8m4GzF0CO8QWrIy6+B6r7WGmmr6qoqwPKi0yg=",
+            "last_login": "2026-01-31T10:24:44.685Z",
+            "is_superuser": false,
+            "username": "marketer",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-01-25T14:02:16Z",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "3gem1vzj089vgsc84v5xwp1mwgcfhie7",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vk3J8:CkqooQPxm0rlw4UOW6-P1raJ_duWVswBBL9JkgYrhsQ",
+            "expire_date": "2026-02-08T16:49:50.993Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5y2k60kw5bt7setrfpmj162vq0xv7j5q",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vjykG:NPJBC6r9Wn8raINRG0CxM-oFRGusmzBTlCqMxtMZw9c",
+            "expire_date": "2026-02-08T11:57:32.504Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "6tmhps0dxhb2oys0j0khxfam7sydsi4s",
+        "fields": {
+            "session_data": ".eJxVjDsOwyAQRO9CHSEEmE_K9DkD2mUhOIlAMnZl5e7BkoukG817MzsLsK0lbD0tYSZ2ZYpdfjuE-Er1APSE-mg8trouM_JD4Sft_N4ovW-n-3dQoJexTmgxkpZ-cs55RyYbm43JcmQpkFBnEBZEiqS8HTjrKSvjvB6ahMQ-X_fKOGk:1vlWdp:r969uMU9Gx1we-r0XtTZwbh_I2NLDDMr55ZmHaMXUEY",
+            "expire_date": "2026-02-12T18:21:17.539Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "78k7uvp7r5zt2maonvgi2mpu9lj19uvn",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vjycN:T7od3Wqj10VsxB7D0n4HUH2xwq6o7hcFkumpmj-sOAo",
+            "expire_date": "2026-02-08T11:49:23.427Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "a89emukuezx3dcm7aq6ev6symu74x5jq",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vl7aQ:BvyrN4S16JkzRxVgz9xvA56_igAqNbLq_QK9lYiMBwA",
+            "expire_date": "2026-02-11T15:36:06.874Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "dhj9zmm4d4bws9qw14efvf7jwtxrd0jf",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vk3IG:VtcDWYhQmZJUmC3qz6BI0OAhHp-Jubl-Ew2mOYdqL9w",
+            "expire_date": "2026-02-08T16:48:56.076Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "j357u5gio2wqz0c31aqbgdzzpwpl7ibm",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vm8U2:VkIZ7oGUTHare2OijTLk0PJwI1GRw1r9TFvNffMHKSk",
+            "expire_date": "2026-02-14T10:45:42.544Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "jqopcjtoqk8f8gbbpd7nhs62bdr3ehw1",
+        "fields": {
+            "session_data": ".eJxVjDsOwyAQRO9CHSEEmE_K9DkD2mUhOIlAMnZl5e7BkoukG817MzsLsK0lbD0tYSZ2ZYpdfjuE-Er1APSE-mg8trouM_JD4Sft_N4ovW-n-3dQoJexTmgxkpZ-cs55RyYbm43JcmQpkFBnEBZEiqS8HTjrKSvjvB6ahMQ-X_fKOGk:1vlUVc:o-wGAN1JO85vusky-sOxw_zNf69UHvF_nyXP3xFmemA",
+            "expire_date": "2026-02-12T16:04:40.044Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "tt7jyvgl6wf3lrthboofi1z1q0w0pf79",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vjgSr:FcYMC9AX2_-j42MtaglCYvd7GLrn8NK5q3gBkJ1xv-I",
+            "expire_date": "2026-02-07T16:26:21.690Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "vhknskkkp9odzkksyf1ztb8pvfezc85r",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vjyef:6ln77cij5FOfLf1Um6aGchGXxyOmXUscV2yDBBEVHMQ",
+            "expire_date": "2026-02-08T11:51:45.747Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "vyn8u8j4jpdgyykzzp6cnap1wfhys3oe",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vjiQF:C0-n9pPsKwtiIHk3aYhe0slHk02bSllIQ2-7lWj_NzA",
+            "expire_date": "2026-02-07T18:31:47.623Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "x3ray07z100h9v9bzjv8i265mhs153n7",
+        "fields": {
+            "session_data": ".eJxVjMsKwyAQAP_FcxGfEXvsvd8gu-5a05YIMTmF_nsRcmivM8McIsG-1bR3XtNM4iq0uPwyhPziZQh6wvJoMrdlW2eUI5Gn7fLeiN-3s_0bVOh1bCEHzxgVhQjgbCiTtUUbNWmXlSEoxsUQvOGIyBQmX9jogs6aTKiK-HwB4TY4Jw:1vlTCc:VyDSNECi2T3D2HDfIz2c0DaX8qjOEUk9mtf5KMXQbIE",
+            "expire_date": "2026-02-12T14:40:58.510Z"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "created_by": 1,
+            "name": "Видеоролик",
+            "description": "Съёмка + монтаж новостей длительностью  600 секунд.",
+            "cost": "600600.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "created_by": 1,
+            "name": "Баннер на билборде",
+            "description": "Изготовление + размещение баннера 3x6м",
+            "cost": "95600.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "created_by": 1,
+            "name": "Пресс-релиз",
+            "description": "Размещение в 10+ СМИ",
+            "cost": "14000.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "created_by": 1,
+            "name": "Настройка аналитики",
+            "description": "Google Analytics + Яндекс.Метрика",
+            "cost": "16500.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "created_by": 1,
+            "name": "SEO оптимизация",
+            "description": "Аудит + базовая оптимизация сайта",
+            "cost": "45000.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "created_by": 3,
+            "name": "Лид-магнит + рассылка",
+            "description": "Создание лид-магнита + email-рассылка",
+            "cost": "11000.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "created_by": 1,
+            "name": "Детективное агенство",
+            "description": "Расследование преступлений",
+            "cost": "30000.00"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "created_by": 1,
+            "name": "Разработка ПО под DOS",
+            "description": "Разработка ПО для тестирования оборудования под DOS",
+            "cost": "36500.00"
+        }
+    },
+    {
+        "model": "ads.ad",
+        "pk": 1,
+        "fields": {
+            "created_by": 1,
+            "product": 3,
+            "name": "Лучший сервис на дороге",
+            "promotionChannel": "#vik-on",
+            "budget": "65000.00"
+        }
+    },
+    {
+        "model": "ads.ad",
+        "pk": 3,
+        "fields": {
+            "created_by": 1,
+            "product": 3,
+            "name": "Видео-монтаж новостей",
+            "promotionChannel": "#asd",
+            "budget": "95000.00"
+        }
+    },
+    {
+        "model": "ads.ad",
+        "pk": 6,
+        "fields": {
+            "created_by": 1,
+            "product": 9,
+            "name": "Анализируем это",
+            "promotionChannel": "#its",
+            "budget": "10500.00"
+        }
+    },
+    {
+        "model": "ads.ad",
+        "pk": 7,
+        "fields": {
+            "created_by": 1,
+            "product": 7,
+            "name": "Создание и размещение баннеров",
+            "promotionChannel": "",
+            "budget": "26500.00"
+        }
+    },
+    {
+        "model": "ads.ad",
+        "pk": 8,
+        "fields": {
+            "created_by": 1,
+            "product": 18,
+            "name": "Служить и защищать",
+            "promotionChannel": "",
+            "budget": "28600.00"
+        }
+    },
+    {
+        "model": "ads.ad",
+        "pk": 9,
+        "fields": {
+            "created_by": 1,
+            "product": 19,
+            "name": "Досим все",
+            "promotionChannel": "#dos",
+            "budget": "29500.00"
+        }
+    },
+    {
+        "model": "leads.lead",
+        "pk": 2,
+        "fields": {
+            "created_by": 1,
+            "ad": 9,
+            "first_name": "Дмитрий",
+            "last_name": "Постригань",
+            "email": "mhdd@ya.ru",
+            "phone": "+79095490000"
+        }
+    },
+    {
+        "model": "leads.lead",
+        "pk": 3,
+        "fields": {
+            "created_by": 1,
+            "ad": 1,
+            "first_name": "Павел",
+            "last_name": "Кот",
+            "email": "ggggg@ya.rus",
+            "phone": "+79001112565"
+        }
+    },
+    {
+        "model": "leads.lead",
+        "pk": 4,
+        "fields": {
+            "created_by": 1,
+            "ad": 1,
+            "first_name": "Юрий",
+            "last_name": "Ленинг",
+            "email": "stac@ya.rus",
+            "phone": "+79095390000"
+        }
+    },
+    {
+        "model": "leads.lead",
+        "pk": 5,
+        "fields": {
+            "created_by": 1,
+            "ad": 1,
+            "first_name": "Тамара",
+            "last_name": "Глоба",
+            "email": "",
+            "phone": "+79000000000"
+        }
+    },
+    {
+        "model": "leads.lead",
+        "pk": 8,
+        "fields": {
+            "created_by": 1,
+            "ad": 8,
+            "first_name": "Бренда Ли",
+            "last_name": "Джонсон",
+            "email": "lapd@la.com",
+            "phone": "+79125552360"
+        }
+    },
+    {
+        "model": "leads.lead",
+        "pk": 9,
+        "fields": {
+            "created_by": 1,
+            "ad": 8,
+            "first_name": "Сергей",
+            "last_name": "Сергеев",
+            "email": "",
+            "phone": "+12125552364"
+        }
+    },
+    {
+        "model": "contracts.contract",
+        "pk": 1,
+        "fields": {
+            "created_by": 1,
+            "product": 3,
+            "file": "contracts/Краткое_описание_бизнес-задачи__Разработка_CRM-системы_1.docx",
+            "name": "Ремонт ИБП",
+            "start_date": "2026-01-28T00:08:00Z",
+            "end_date": "2500-07-08T10:07:00Z",
+            "cost": "95199.00"
+        }
+    },
+    {
+        "model": "contracts.contract",
+        "pk": 2,
+        "fields": {
+            "created_by": 1,
+            "product": 8,
+            "file": "contracts/Рекомендации_к_заполнению_резюме_в_шаблоне_Skillbox_N33fofL.pdf",
+            "name": "Создание текста",
+            "start_date": "2026-01-30T02:14:00Z",
+            "end_date": "2026-02-01T04:14:00Z",
+            "cost": "10111011.00"
+        }
+    },
+    {
+        "model": "contracts.contract",
+        "pk": 4,
+        "fields": {
+            "created_by": 1,
+            "product": 18,
+            "file": "contracts/Техническое_задание_Разработка_CRM-системы_2.docx",
+            "name": "Лунный свет",
+            "start_date": "2026-01-31T16:34:00Z",
+            "end_date": "2032-06-29T16:34:00Z",
+            "cost": "65000.00"
+        }
+    },
+    {
+        "model": "contracts.contract",
+        "pk": 5,
+        "fields": {
+            "created_by": 1,
+            "product": 19,
+            "file": "contracts/zxc.png",
+            "name": "Создание ПО для тестирования HDD",
+            "start_date": "2026-01-29T19:04:00Z",
+            "end_date": "2026-02-22T19:04:00Z",
+            "cost": "95000.00"
+        }
+    },
+    {
+        "model": "customers.customer",
+        "pk": 4,
+        "fields": {
+            "created_by": 1,
+            "lead": 4,
+            "contract": 2
+        }
+    },
+    {
+        "model": "customers.customer",
+        "pk": 5,
+        "fields": {
+            "created_by": 1,
+            "lead": 3,
+            "contract": 1
+        }
+    },
+    {
+        "model": "customers.customer",
+        "pk": 6,
+        "fields": {
+            "created_by": 1,
+            "lead": 8,
+            "contract": 4
+        }
+    },
+    {
+        "model": "customers.customer",
+        "pk": 7,
+        "fields": {
+            "created_by": 1,
+            "lead": 2,
+            "contract": 5
+        }
+    }
+]

@@ -1,0 +1,9 @@
+[MASTER]
+load-plugins=pylint_django
+ignore=migrations
+
+[DJANGO]
+django-settings-module=crm.settings
+
+[REPORTS]
+ignore-patterns=manage.py

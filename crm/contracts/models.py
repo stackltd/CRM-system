@@ -1,26 +1,37 @@
-from django.contrib.auth.models import User
+"""
+Модуль для моделей приложения products.
+"""
+
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models import (
+    PROTECT,
     CharField,
-    TextField,
-    DecimalField,
-    SmallIntegerField,
     DateTimeField,
-    BooleanField,
+    DecimalField,
     FileField,
     ForeignKey,
-    PROTECT,
 )
+
 
 from products.models import Product
 
+User = get_user_model()
 
-def user_contract_dir_path(inst: "Contract", filename: str) -> str:
+def user_contract_dir_path(filename: str) -> str:
+    """
+    Получение пути для сохранения переданного файла
+    :param filename:
+    :return:
+    """
     path = f"contracts/{filename}"
     return path
 
 
 class Contract(models.Model):
+    """
+    Модель для контрактов
+    """
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     product = ForeignKey(Product, on_delete=PROTECT, related_name="contracts")
     file = FileField(upload_to=user_contract_dir_path)

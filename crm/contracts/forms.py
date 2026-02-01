@@ -1,8 +1,17 @@
+"""
+Модуль для кастомизации форм приложения contracts.
+"""
+
+
 from django import forms
+
 from .models import Contract
 
 
 class ContractForm(forms.ModelForm):
+    """
+    Кастомизация форм приложения contracts для создания возможности выборы даты в UpdateView
+    """
     class Meta:
         model = Contract
         fields = ["product", "name", "start_date", "end_date", "cost", "file"]

@@ -1,12 +1,25 @@
-from django.shortcuts import reverse
+"""
+Модуль представлений приложения customers
+"""
+
+# pylint: disable=too-many-ancestors
+
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import DetailView, ListView
+
+from crm.views_custom import (
+    CustomCreateView,
+    CustomDeleteView,
+    CustomUpdateView,
+    PermissionsMixin,
+)
 
 from .models import Product
-from crm.views_custom import CustomDeleteView, CustomCreateView, CustomUpdateView, PermissionsMixin
-
 
 class ProductsList(PermissionsMixin, ListView):
+    """
+    Список услуг
+    """
     template_name = "products/products-list.html"
     queryset = Product.objects.only("name")
     context_object_name = "products"
@@ -14,6 +27,9 @@ class ProductsList(PermissionsMixin, ListView):
 
 
 class ProductCreateView(PermissionsMixin, CustomCreateView):
+    """
+    Создание услуги
+    """
     model = Product
     template_name = "products/products-create.html"
     fields = ["name", "description", "cost"]
@@ -22,6 +38,9 @@ class ProductCreateView(PermissionsMixin, CustomCreateView):
 
 
 class ProductDeleteView(PermissionsMixin, CustomDeleteView):
+    """
+    Удаление услуги
+    """
     model = Product
     template_name = "products/products-delete.html"
     success_url = reverse_lazy("products:products-list")
@@ -29,12 +48,18 @@ class ProductDeleteView(PermissionsMixin, CustomDeleteView):
 
 
 class ProductDetailView(PermissionsMixin, DetailView):
+    """
+    Детализация услуги
+    """
     template_name = "products/products-detail.html"
     model = Product
     permission_required = "products.view_product"
 
 
 class ProductUpdateView(PermissionsMixin, CustomUpdateView):
+    """
+    Редактирование услуги
+    """
     model = Product
     fields = ["name", "description", "cost"]
     template_name = "products/products-edit.html"
