@@ -9,4 +9,5 @@ class RegistrationConfig(AppConfig):
     """
     Конфигурация приложения registration.
     """
+
     name = "registration"

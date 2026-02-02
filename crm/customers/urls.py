@@ -9,7 +9,6 @@ URL‑конфигурация приложения customers.
 - /customers/<int:pk>/delete/ — удаление клиентов;
 """
 
-
 from django.urls import path
 
 from .views import (

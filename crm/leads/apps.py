@@ -9,4 +9,5 @@ class LeadsConfig(AppConfig):
     """
     Конфигурация приложения leads.
     """
+
     name = "leads"

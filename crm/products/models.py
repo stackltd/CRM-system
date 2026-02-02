@@ -2,7 +2,6 @@
 Модуль моделей приложения products.
 """
 
-
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator
 from django.db import models
@@ -21,6 +20,7 @@ class Product(models.Model):
     """
     Модель услуги приложения products
     """
+
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     name = CharField(max_length=100, db_index=True)
     description = TextField()

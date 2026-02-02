@@ -5,7 +5,6 @@ URL‑конфигурация приложения products.
 - "/" — Статистика CRM;
 """
 
-
 from django.urls import path
 
 from .views import GenStatView

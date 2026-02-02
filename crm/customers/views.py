@@ -23,6 +23,7 @@ class CustomersListView(PermissionsMixin, ListView):
     """
     Список клиентов
     """
+
     template_name = "customers/customers-list.html"
     context_object_name = "customers"
     lead_qs = Lead.objects.only("first_name", "last_name")
@@ -36,6 +37,7 @@ class CustomerCreateView(PermissionsMixin, CustomCreateView):
     """
     Создание клиента
     """
+
     model = Customer
     fields = ["contract", "lead"]
     template_name = "customers/customers-create.html"
@@ -47,6 +49,7 @@ class CustomerDeleteView(PermissionsMixin, CustomDeleteView):
     """
     Удаление клиента
     """
+
     model = Customer
     template_name = "customers/customers-delete.html"
     success_url = reverse_lazy("customers:customers-list")
@@ -57,6 +60,7 @@ class CustomerDetailView(PermissionsMixin, DetailView):
     """
     Детализация клиента
     """
+
     template_name = "customers/customers-detail.html"
     lead_qs = Lead.objects.defer("created_by")
     queryset = Customer.objects.prefetch_related(
@@ -69,6 +73,7 @@ class CustomerUpdateView(PermissionsMixin, CustomUpdateView):
     """
     Обновление клиента
     """
+
     model = Customer
     fields = ["contract", "lead"]
     template_name = "customers/customers-edit.html"

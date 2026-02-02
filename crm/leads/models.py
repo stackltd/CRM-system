@@ -2,7 +2,6 @@
 Модуль моделей приложения leads.
 """
 
-
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models import (
@@ -17,10 +16,12 @@ from ads.models import Ad
 
 User = get_user_model()
 
+
 class Lead(models.Model):
     """
     Модель потенциальных клиентов приложения leads
     """
+
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     ad = ForeignKey(Ad, on_delete=PROTECT, related_name="leads")
     first_name = CharField(max_length=100, db_index=True)

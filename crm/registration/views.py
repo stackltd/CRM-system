@@ -11,6 +11,7 @@ class CustomLoginView(LoginView):
     """
     Вход в систему
     """
+
     redirect_authenticated_user = True
     next_page = "/"
 
@@ -19,6 +20,7 @@ class CustomLogoutView(LogoutView):
     """
     Выход из системы
     """
+
     http_method_names = ["get", "post"]
 
     def get(self, request, *args, **kwargs):

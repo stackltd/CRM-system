@@ -9,4 +9,5 @@ class ProductsConfig(AppConfig):
     """
     Конфигурации приложения products.
     """
+
     name = "products"

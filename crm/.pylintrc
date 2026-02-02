@@ -7,3 +7,4 @@ django-settings-module=crm.settings
 
 [REPORTS]
 ignore-patterns=manage.py
+

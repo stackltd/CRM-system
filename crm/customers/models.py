@@ -16,6 +16,7 @@ class Customer(models.Model):
     """
     Модель клиента приложения customers
     """
+
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     lead = ForeignKey(Lead, on_delete=PROTECT, related_name="customers")
     contract = ForeignKey(Contract, on_delete=PROTECT, related_name="customers")

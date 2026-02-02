@@ -13,18 +13,18 @@ from django.db.models import (
     ForeignKey,
 )
 
-
 from products.models import Product
 
 User = get_user_model()
 
-def user_contract_dir_path(filename: str) -> str:
+
+def user_contract_dir_path(inst: "Contract", filename: str) -> str:
     """
     Получение пути для сохранения переданного файла
     :param filename:
     :return:
     """
-    path = f"contracts/{filename}"
+    path = f"contracts/{inst.name}_{filename}"
     return path
 
 
@@ -32,6 +32,7 @@ class Contract(models.Model):
     """
     Модель для контрактов
     """
+
     created_by = ForeignKey(User, on_delete=PROTECT, editable=False)
     product = ForeignKey(Product, on_delete=PROTECT, related_name="contracts")
     file = FileField(upload_to=user_contract_dir_path)

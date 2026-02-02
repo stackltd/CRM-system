@@ -13,6 +13,7 @@ class CustomCreateView(CreateView):
     """
     Получение текущего пользователя для создания новой записи в базе
     """
+
     def form_valid(self, form):
         form.instance.created_by = self.request.user
         form.save(commit=False)
@@ -24,6 +25,7 @@ class CustomDeleteView(DeleteView):
     """
     Создание сообщения ошибки для шаблона при попытке удаления связанных записей
     """
+
     def post(self, request, *args, **kwargs):
         try:
             return super().delete(request, *args, **kwargs)
@@ -40,6 +42,7 @@ class CustomUpdateView(UpdateView):
     """
     Получение url для перехода после обновления сущности в базе
     """
+
     def get_success_url(self):
         model_name = self.model._meta.verbose_name_plural
         url = reverse(
@@ -52,6 +55,7 @@ class PermissionsMixin(LoginRequiredMixin, UserPassesTestMixin):
     """
     Класс миксин с permissions для добавления в CRUD views
     """
+
     def test_func(self):
         return self.request.user.has_perm(self.permission_required)
 

@@ -18,6 +18,7 @@ class GenStatView(LoginRequiredMixin, TemplateView):
     """
     Сбор статистики CRM системы
     """
+
     template_name = "users/index.html"
 
     def get(self, request, *args, **kwargs):

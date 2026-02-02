@@ -9,4 +9,5 @@ class ContractsConfig(AppConfig):
     """
     Конфигурация приложения contracts.
     """
+
     name = "contracts"

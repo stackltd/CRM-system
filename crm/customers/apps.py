@@ -9,4 +9,5 @@ class CustomersConfig(AppConfig):
     """
     Конфигурация приложения customers.
     """
+
     name = "customers"

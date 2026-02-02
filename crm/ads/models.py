@@ -16,6 +16,7 @@ from products.models import Product
 
 User = get_user_model()
 
+
 class Ad(models.Model):
     """
     Модель для рекламы.

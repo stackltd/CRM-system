@@ -9,7 +9,6 @@ URL‑конфигурация приложения contracts.
 - /contracts/<int:pk>/delete/ — удаление услуги;
 """
 
-
 from django.urls import path
 
 from .views import (
