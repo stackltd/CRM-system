@@ -1,7 +1,3 @@
-"""
-Классы миксины для views приложений
-"""
-
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import ProtectedError

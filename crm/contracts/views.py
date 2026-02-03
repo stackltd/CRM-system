@@ -1,9 +1,3 @@
-"""
-Модуль представлений приложения contracts
-"""
-
-# pylint: disable=too-many-ancestors
-
 from django.db.models import Prefetch
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView

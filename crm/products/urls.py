@@ -1,14 +1,3 @@
-"""
-URL‑конфигурация приложения products.
-
-Содержит маршруты:
-- /products/ — список услуг;
-- /products/new/ — создание услуги;
-- /products/<int:pk>/ — детализация услуги;
-- /products/<int:pk>/edit/ — редактирование услуги;
-- /products/<int:pk>/delete/ — удаление услуги;
-"""
-
 from django.urls import path
 
 from .views import (

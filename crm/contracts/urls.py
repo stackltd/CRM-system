@@ -1,14 +1,3 @@
-"""
-URL‑конфигурация приложения contracts.
-
-Содержит маршруты:
-- /contracts/ — список услуг;
-- /contracts/new/ — создание услуги;
-- /contracts/<int:pk>/ — детали услуги;
-- /contracts/<int:pk>/edit/ — редактирование услуги;
-- /contracts/<int:pk>/delete/ — удаление услуги;
-"""
-
 from django.urls import path
 
 from .views import (

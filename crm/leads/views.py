@@ -1,9 +1,3 @@
-"""
-Модуль представлений приложения customers
-"""
-
-# pylint: disable=too-many-ancestors
-
 from django.db.models import Prefetch, QuerySet
 from django.urls import reverse_lazy
 from django.views.generic import (

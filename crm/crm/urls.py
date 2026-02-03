@@ -1,18 +1,3 @@
-"""
-URL configuration for crm project.
-
-Содержит маршруты:
-- /admin/ — админ. панель
-- "" — главная страница;
-- /accounts/ — авторизация пользователя системы;
-- /products — базовый путь для products;
-- /ads — базовый путь для ads;
-- /leads — базовый путь для leads;
-- /contracts — базовый путь для contracts;
-- /customers — базовый путь для customers;
-
-"""
-
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin

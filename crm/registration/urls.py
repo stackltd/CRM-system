@@ -1,11 +1,3 @@
-"""
-URL‑конфигурация приложения products.
-
-Содержит маршруты:
-- /accounts/login — авторизация в системе;
-- /accounts/logout/ — выход из системы;
-"""
-
 from django.urls import path
 
 from .views import CustomLoginView, CustomLogoutView

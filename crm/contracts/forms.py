@@ -1,7 +1,3 @@
-"""
-Модуль для кастомизации форм приложения contracts.
-"""
-
 from django import forms
 from django.forms import FileField
 

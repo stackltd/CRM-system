@@ -1,12 +1,7 @@
-"""
-Модуль представлений приложения ads.
-"""
 from typing import Any
 
-# pylint: disable=too-many-ancestors
-
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db.models import Count, F, Prefetch, Sum, QuerySet
+from django.db.models import Count, F, Prefetch, QuerySet, Sum
 from django.template.response import TemplateResponse
 from django.urls import reverse_lazy
 from django.views.generic import (
@@ -22,6 +17,7 @@ from crm.views_custom import (
     PermissionsMixin,
 )
 from products.models import Product
+
 from .models import Ad
 
 
