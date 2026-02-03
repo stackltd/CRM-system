@@ -2,6 +2,7 @@ from typing import Any
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count, F, Prefetch, QuerySet, Sum
+from django.http import HttpResponse
 from django.template.response import TemplateResponse
 from django.urls import reverse_lazy
 from django.views.generic import (
@@ -86,7 +87,7 @@ class AdStatisticView(LoginRequiredMixin, TemplateView):
 
     template_name = "ads/ads-statistic.html"
 
-    def get(self, request, *args, **kwargs) -> TemplateResponse:
+    def get(self, request, *args, **kwargs) -> HttpResponse:
         context: dict[str, Any] = self.get_context_data(**kwargs)
         ads: QuerySet[Ad] = (
             Ad.objects
