@@ -1,8 +1,10 @@
-from django.test import TestCase, Client
-from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django.test import Client, TestCase
+from django.urls import reverse
+
 from ads.models import Ad
 from products.models import Product
+
 from .models import Lead
 
 # python manage.py test  -v 2  --keepdb  --parallel

@@ -2,14 +2,15 @@ import os
 from datetime import timedelta
 from logging import Logger
 
-from django.core.files.uploadedfile import SimpleUploadedFile
-from django.test import TestCase, Client
-from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.test import Client, TestCase
+from django.urls import reverse
 from django.utils import timezone
 
-from .models import Contract
 from products.models import Product
+
+from .models import Contract
 
 logger = Logger("test")
 
