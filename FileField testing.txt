@@ -1,0 +1,165 @@
+## 🚀 **Тестирование Django FileField**
+
+***
+
+### **✅ Базовый тест FileField**
+
+```python
+# ads/tests.py
+from django.test import TestCase
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.urls import reverse
+from ads.models import Ad
+import os
+
+class TestAdFileField(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.user = User.objects.create_user('admin', '123')
+        self.client.login(username='admin', password='123')
+        self.create_url = reverse('ads:ad-create')
+
+    def test_file_upload_create(self):
+        """Тест загрузки файла при создании"""
+        # 🔥 Создаём тестовый файл
+        test_image = SimpleUploadedFile(
+            name='test_banner.jpg',
+            content=b'fake image content',
+            content_type='image/jpeg'
+        )
+        
+        data = {
+            'name': 'Тест рекламы',
+            'budget': 1000,
+            'image': test_image,  # ← FileField!
+        }
+        
+        response = self.client.post(self.create_url, data)
+        self.assertEqual(response.status_code, 302)
+        
+        # Проверяем создание с файлом
+        ad = Ad.objects.get(name='Тест рекламы')
+        self.assertTrue(ad.image)  # файл загружен
+        self.assertTrue(os.path.exists(ad.image.path))
+        self.assertEqual(ad.image.name, 'ads/test_banner.jpg')
+
+    def test_file_upload_update(self):
+        """Тест замены файла в UpdateView"""
+        # Создаём рекламу с файлом
+        test_image1 = SimpleUploadedFile('old.jpg', b'old content', 'image/jpeg')
+        ad = Ad.objects.create(name='Старый баннер', image=test_image1, created_by=self.user)
+        
+        # Новое изображение
+        test_image2 = SimpleUploadedFile('new.jpg', b'new content', 'image/jpeg')
+        
+        update_url = reverse('ads:ad-update', kwargs={'pk': ad.pk})
+        data = {
+            'name': 'Обновлённый баннер',
+            'image': test_image2,
+        }
+        
+        self.client.post(update_url, data)
+        ad.refresh_from_db()
+        
+        self.assertEqual(ad.name, 'Обновлённый баннер')
+        self.assertEqual(ad.image.name, 'ads/new.jpg')
+```
+
+***
+
+### **🔍 Создание тестовых файлов**
+
+```python
+def create_test_image(self, name='test.png', size=(100, 100)):
+    """Создаёт реальное PNG изображение"""
+    from PIL import Image
+    from io import BytesIO
+    
+    img = Image.new('RGB', size, color='red')
+    buffer = BytesIO()
+    img.save(buffer, format='PNG')
+    return SimpleUploadedFile(
+        name=name,
+        content=buffer.getvalue(),
+        content_type='image/png'
+    )
+
+def test_real_image(self):
+    image_file = self.create_test_image()
+    data = {'name': 'test', 'image': image_file}
+    self.client.post(self.create_url, data)
+```
+
+***
+
+### **✅ Тесты валидации FileField**
+
+```python
+def test_file_size_validation(self):
+    """Тест ограничения размера файла"""
+    # Большой файл (>2MB)
+    large_file = SimpleUploadedFile(
+        'huge.jpg',
+        b'a' * (2 * 1024 * 1024 + 1),  # 2MB + 1 байт
+        'image/jpeg'
+    )
+    
+    data = {'name': 'test', 'image': large_file}
+    response = self.client.post(self.create_url, data)
+    
+    self.assertEqual(response.status_code, 200)
+    self.assertFormError(response.context['form'], 'image', 'Максимальный размер 2MB')
+
+def test_file_type_validation(self):
+    """Только изображения"""
+    wrong_file = SimpleUploadedFile('script.exe', b'malware', 'application/x-msdownload')
+    data = {'name': 'test', 'image': wrong_file}
+    
+    response = self.client.post(self.create_url, data)
+    self.assertFormError(response.context['form'], 'image', 'Только изображения!')
+```
+
+***
+
+### **🔍 Модель с FileField**
+
+```python
+# ads/models.py
+class Ad(models.Model):
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='ads/', validators=[
+        FileExtensionValidator(['jpg', 'png']),
+        FileSizeValidator(2 * 1024 * 1024)  # 2MB
+    ])
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+```
+
+***
+
+### **✅ Тест удаления файла**
+
+```python
+def test_delete_file(self):
+    """Тест очистки FileField"""
+    test_image = SimpleUploadedFile('banner.jpg', b'image', 'image/jpeg')
+    ad = Ad.objects.create(name='test', image=test_image, created_by=self.user)
+    
+    # POST с пустым файлом = удаление
+    update_url = reverse('ads:ad-update', kwargs={'pk': ad.pk})
+    data = {'name': 'без фото'}
+    
+    self.client.post(update_url, data)
+    ad.refresh_from_db()
+    
+    self.assertIsNone(ad.image)  # файл удалён
+```
+
+***
+
+### **🚀 Запуск тестов**
+
+```bash
+python manage.py test ads.tests.TestAdFileField -v 2
+```
+
+**`SimpleUploadedFile`** + **`content_type`** = **реалистичные файлы для тестов**! 🚀

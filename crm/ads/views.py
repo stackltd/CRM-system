@@ -89,8 +89,8 @@ class AdStatisticView(LoginRequiredMixin, TemplateView):
             Ad.objects
             # .select_related("product").prefetch_related("leads__customers")
             .annotate(
-                leads_count=Count("leads", distinct=True),
-                customers_count=Count("leads__customers", distinct=True),
+                leads_count=Count("leads"),
+                customers_count=Count("leads__customers"),
                 contracts_income=Sum(
                     "product__contracts__cost",
                     distinct=True,

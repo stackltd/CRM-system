@@ -6,7 +6,7 @@ ignore=migrations
 django-settings-module=crm.settings
 
 [REPORTS]
-ignore-patterns=manage.py,apps.py
+ignore-patterns=manage.py,apps.py,tests.py
 
 [MESSAGES CONTROL]
 disable=raw-checker-failed,
